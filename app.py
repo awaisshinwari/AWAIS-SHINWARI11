@@ -31,7 +31,7 @@ except:
     st.error("GOOGLE_API_KEY Streamlit Secrets me add karo")
     st.stop()
 
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-2.0-flash")
 
 uploaded_resume = st.file_uploader("Resume Upload karo (PDF/DOCX)", type=["pdf", "docx"])
 job_desc = st.text_area("Job Description yahan paste karo", height=200)
