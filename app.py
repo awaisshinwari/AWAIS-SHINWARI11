@@ -40,7 +40,7 @@ if st.button("Check ATS Score"):
             resume_text = extract_text(uploaded_file)
             prompt = "You are ATS checker. Resume: " + resume_text[:8000] + " Job Desc: " + job_desc[:5000] + " Give ATS Score out of 100, Missing Keywords, and 3 Suggestions."
             try:
-                model = genai.GenerativeModel("gemini-2.5-flash")
+                model = genai.GenerativeModel("gemini-3.8-flash")
                 response = model.generate_content(prompt)
                 st.success("Result:")
                 st.write(response.text)
